@@ -1,0 +1,33 @@
+.loading_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading_container {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 100px;
+    box-sizing: border-box;
+    background-color: #aefdde;
+    background-position: center;
+    background-size: cover;
+}
+
+.loading_container img {
+    margin-bottom: 20px;
+}
+
+.loading_loader {
+    margin-top: 100px;
+    margin-left: 160px;
+}
+
+@media screen and (max-width: 768px) {
+    .loading_container img {
+        width: 250px;
+    }
+    .loading_loader{
+     display: none;
+    }
+}

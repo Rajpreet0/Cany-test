@@ -1,0 +1,130 @@
+.homeCards {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.homeCards_Cards {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.homeCards_Cards .homeCards_Circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.homeCards_Cards .homeCards_Circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #548672;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.homeCards_Cards:hover .homeCards_Circle:before {
+    background: #548672;
+    clip-path: circle(400px at center);
+}
+
+.homeCards_Cards img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.homeCards:hover img {
+    left: 72%;
+    height: 300px;
+}
+
+.homeCards_Cards .homeCards_Content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.homeCards_Cards:hover .homeCards_Content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.homeCards_Cards .homeCards_Content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.homeCards_Cards .homeCards_Content p {
+    color: #fff;
+    max-width: 200px;
+}
+
+.homeCards_Cards .homeCards_Content a {
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+    .homeCards_Cards{
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .homeCards_Cards{
+        height: 600px;
+    }
+    .homeCards_Cards .homeCards_Content {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+    .homeCards_Cards:hover img {
+        top: 70%;
+        left: 50%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 420px) {
+    .homeCards_Cards .homeCards_Content {
+        padding: 20px;
+    }
+}

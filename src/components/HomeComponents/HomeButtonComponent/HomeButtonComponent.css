@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+.homeButtonComponent {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+.homeButton_Center a {
+    display: inherit;
+    width: 250px;
+    height: 50px;
+    color: #41b787;
+    font-size: 20px;
+    background: transparent;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #41b787;
+    transition: .5s;
+    transform: skew(15deg);
+}
+
+.homeButton_Center a:hover {
+    background-color: rgb(54, 146, 109);
+    color: #fff;
+}
+
+.homeButton_Center span:nth-child(1)
+{
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    border: 2px solid #41b787;
+    background: white;
+    top: 6px;
+    left: -19px;
+    transform: skewY(-45deg);
+}
+
+.homeButton_Center span:nth-child(2)
+{
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    border: 2px solid #41b787;
+    background: white;
+    bottom: -19px;
+    right: 6px;
+    transform: skewX(-45deg);
+    box-shadow: 0 40px 25px rgba(0, 0, 0, .1);
+}
+
+.homeButtonComponent h1 {
+    display: inline;
+}
+
+.homeButton_headline h1 {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    letter-spacing: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .homeButton_headline h1 {
+        font-size: 25px;
+    }
+    .homeButton_Center a {
+        font-size: 20px;
+        width: 200px;
+    }
+}
